@@ -1,0 +1,10 @@
+<% if logged_in? %>
+  Logged in as User No. <strong><%= current_user.id %></strong>.
+  <br>
+  <br>
+  <%= link_to "Sign out", '/logout' %>
+<% else %>
+  <%= link_to "Sign in with Todo", "/auth/todo" %>
+  <br>
+  <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+<% end %>
